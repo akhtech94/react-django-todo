@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-f=v(8%66*#cdaoxm@-4(8ih0nsl%k4zn-k8)39-qx3*if4q5s=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -84,11 +84,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'tododjango',
-        'USER': 'tododjango',
-        'PASSWORD': 'tododjango_1234',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': 'akhtech94$default',
+        'USER': 'akhtech94',
+        'PASSWORD': 'todo_1234',
+        'HOST': 'akhtech94.mysql.pythonanywhere-services.com',
     }
 }
 
