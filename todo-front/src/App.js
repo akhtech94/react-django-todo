@@ -43,7 +43,7 @@ class App extends React.Component{
   }
 
   fetchTasks(){
-    fetch('http://akhtech94.pythonanywhere.com/api/task-list/')
+    fetch('http://127.0.0.1:8000/api/task-list/')
     .then(response => response.json())
     .then(data => this.setState({todolist:data}))
   }
@@ -59,9 +59,9 @@ class App extends React.Component{
     e.preventDefault();
     console.log(this.state.activeItem);
     const csrftoken = this.getCookie('csrftoken');
-    let url = 'http://akhtech94.pythonanywhere.com/api/task-create/';
+    let url = 'http://127.0.0.1:8000/api/task-create/';
     if(this.state.editing === true){
-      url = 'http://akhtech94.pythonanywhere.com/api/task-update/' + this.state.activeItem.id + '/';
+      url = 'http://127.0.0.1:8000/api/task-update/' + this.state.activeItem.id + '/';
       console.log(this.state.activeItem.id);
       this.setState({editing:false});
     }
@@ -94,7 +94,7 @@ class App extends React.Component{
 
   handleDelete(task){
     const csrftoken = this.getCookie('csrftoken');
-    let url = 'http://akhtech94.pythonanywhere.com/api/task-delete/' + task.id + '/';
+    let url = 'http://127.0.0.1:8000/api/task-delete/' + task.id + '/';
     fetch(url, {
       method:'DELETE',
       headers:{
@@ -113,10 +113,10 @@ class App extends React.Component{
           <div className="formwrapper p-3"> 
             <form onSubmit={this.handleSubmit}>
               <div className="form-row mt-3">
-                <div className="col-md-10">
+                <div className="col-md-10 py-1">
                   <input onChange={this.handleChange} type="text" className="form-control" placeholder="Your new task" name="title" value={this.state.activeItem.title}></input>
                 </div>
-                <div className="col-md-2">
+                <div className="col-md-2 py-1">
                   <input type="submit" value="SUBMIT" className="form-control btn btn-primary" id="submit"></input>
                 </div>
               </div>
@@ -128,15 +128,16 @@ class App extends React.Component{
               return(
                 <div key={index}>
                   <div className="form-row p-1 m-1">
-                    <div className="col-md-8">
+                    <div className="col-lg-10">
                       <span>{task.title}</span>                      
                     </div>
-                    <div className="col-md-4">
-                      <div className="btn-group">
+                    <div className="col-lg-2">
+                      <div className="btn-group pr-1">
                         <button onClick={() => self.handleEdit(task)} className="btn btn-warning mx-1">EDIT</button>
-                        <button onClick={() => self.handleDelete(task)} className="btn btn-outline-danger mx-1">DELETE</button>                      
+                        <button onClick={() => self.handleDelete(task)} className="btn btn-outline-danger mx-1">DELETE</button>  
                       </div>
-                    </div>                                            
+                    </div>
+                    <hr />                                            
                   </div>
                 </div>
               )
