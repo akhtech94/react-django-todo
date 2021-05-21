@@ -43,7 +43,7 @@ class App extends React.Component{
   }
 
   fetchTasks(){
-    fetch('http://127.0.0.1:8000/api/task-list/')
+    fetch('http://akhtech94.pythonanywhere.com/api/task-list/')
     .then(response => response.json())
     .then(data => this.setState({todolist:data}))
   }
@@ -59,9 +59,9 @@ class App extends React.Component{
     e.preventDefault();
     console.log(this.state.activeItem);
     const csrftoken = this.getCookie('csrftoken');
-    let url = 'http://127.0.0.1:8000/api/task-create/';
+    let url = 'http://akhtech94.pythonanywhere.com/api/task-create/';
     if(this.state.editing === true){
-      url = 'http://127.0.0.1:8000/api/task-update/' + this.state.activeItem.id + '/';
+      url = 'http://akhtech94.pythonanywhere.com/api/task-update/' + this.state.activeItem.id + '/';
       console.log(this.state.activeItem.id);
       this.setState({editing:false});
     }
@@ -94,7 +94,7 @@ class App extends React.Component{
 
   handleDelete(task){
     const csrftoken = this.getCookie('csrftoken');
-    let url = 'http://127.0.0.1:8000/api/task-delete/' + task.id + '/';
+    let url = 'http://akhtech94.pythonanywhere.com/api/task-delete/' + task.id + '/';
     fetch(url, {
       method:'DELETE',
       headers:{
