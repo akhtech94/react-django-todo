@@ -113,10 +113,10 @@ class App extends React.Component{
           <div className="formwrapper p-3"> 
             <form onSubmit={this.handleSubmit}>
               <div className="form-row mt-3">
-                <div className="col-10">
+                <div className="col-xl-10">
                   <input onChange={this.handleChange} type="text" className="form-control" placeholder="Your new task" name="title" value={this.state.activeItem.title}></input>
                 </div>
-                <div className="col-2">
+                <div className="col-xl-2">
                   <input type="submit" value="SUBMIT" className="form-control btn btn-primary" id="submit"></input>
                 </div>
               </div>
@@ -128,10 +128,10 @@ class App extends React.Component{
               return(
                 <div key={index}>
                   <div className="row p-1 m-1">
-                    <div className="col-8">
+                    <div className="col-xl-8">
                       <span>{task.title}</span>                      
                     </div>
-                    <div className="col-4">
+                    <div className="col-xl-4">
                       <div className="btn-group">
                         <button onClick={() => self.handleEdit(task)} className="btn btn-warning mx-1">EDIT</button>
                         <button onClick={() => self.handleDelete(task)} className="btn btn-outline-danger mx-1">DELETE</button>                      
