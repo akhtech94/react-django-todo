@@ -127,7 +127,7 @@ class App extends React.Component{
             {tasks.map((task, index) => {
               return(
                 <div key={index}>
-                  <div className="row p-1 m-1">
+                  <div className="form-row p-1 m-1">
                     <div className="col-md-8">
                       <span>{task.title}</span>                      
                     </div>
