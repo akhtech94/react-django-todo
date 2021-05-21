@@ -108,7 +108,7 @@ class App extends React.Component{
     let tasks = this.state.todolist
     let self = this;
     return(
-      <div className="container w-50">
+      <div className="container">
         <div className="mainwrapper rounded my-5">
           <div className="formwrapper p-3"> 
             <form onSubmit={this.handleSubmit}>
