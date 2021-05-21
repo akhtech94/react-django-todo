@@ -81,26 +81,26 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'akhtech94$default',
-#         'USER': 'akhtech94',
-#         'PASSWORD': 'todo_1234',
-#         'HOST': 'akhtech94.mysql.pythonanywhere-services.com',
-#     }
-# }
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'tododjango',
-        'USER': 'tododjango',
-        'PASSWORD': 'tododjango_1234',
-        'HOST': 'localhost',
+        'NAME': 'akhtech94$default',
+        'USER': 'akhtech94',
+        'PASSWORD': 'todo_1234',
+        'HOST': 'akhtech94.mysql.pythonanywhere-services.com',
     }
 }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'tododjango',
+#         'USER': 'tododjango',
+#         'PASSWORD': 'tododjango_1234',
+#         'HOST': 'localhost',
+#     }
+# }
 
 
 # Password validation
