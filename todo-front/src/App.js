@@ -129,7 +129,7 @@ class App extends React.Component{
                 <div key={index}>
                   <div className="form-row p-1 m-1">
                     <div className="col-lg-10">
-                      <span>{task.title}</span>                      
+                      <span className='pl-2'>{task.title}</span>                      
                     </div>
                     <div className="col-lg-2">
                       <div className="btn-group pr-1">
